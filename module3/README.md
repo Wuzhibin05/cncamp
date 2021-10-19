@@ -155,7 +155,6 @@ v1.0: digest: sha256:9a6c7662edd9d7b19ce34988ac13b38846608edf373db4ac74c1d5fef3e
 ```
 
 
-
 ### 4，本地运行镜像
 
 - 本地运行
@@ -188,7 +187,7 @@ root@master:/opt/project/src/cncamp/module3/httpserver# docker inspect httpserve
 
 - 查看ip
 
-  方法一：直接查看
+方法一：直接查看
 
 ```bash
 docker inspect httpserver --format "{{ .NetworkSettings.IPAddress }}"
