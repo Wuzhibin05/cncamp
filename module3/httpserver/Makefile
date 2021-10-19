@@ -1,7 +1,4 @@
 export tag=v1.0
-root:
-	export ROOT=cncamp/cncamp/golang
-
 build:
 	echo "building httpserver binary"
 	mkdir -p bin/amd64
@@ -10,6 +7,9 @@ build:
 release: build
 	echo "building httpserver image"
 	docker build -t wuzb/httpserver:${tag} .
+login: login
+	echo "login docker.io"
+	docker login docker.io -u wuzb
 
 push: release
 	echo "pushing image to repository"
